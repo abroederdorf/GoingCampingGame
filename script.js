@@ -12,7 +12,6 @@
 var essentials = ["Map", "Compass", "Sunglasses", "Jacket", "Headlamp", "First-aid", "Fire starter", "Matches", "Knife", "Candy Bar"];
 var backpack = ["Empty", "Empty", "Empty"];
 var winningItems = ["Empty", "Empty", "Empty"];
-var gameStatus = false;
 
 //Start time
 var startTime, currentTime, timeDiff, timeRemaining, remainMin, remainSec;
@@ -514,7 +513,7 @@ function getRoom() {
 //Description: This determines if all the correct items are gathered
 //and actions are completed and player is on porch, if not, status remains false
 //Input: None
-//Output: None, gameStatus may change
+//Output: None
 function leave(){
 	var boolCount = 0, itemCount = 0;
 	
@@ -554,7 +553,8 @@ function leave(){
 			if (itemCount == 3)
 			{
 				document.getElementById("msgPar").textContent = "Congratulations, you finished the house tasks and packed your three missing items. Have fun camping with your friends!";
-				gameStatus = true;
+				disableGameButtons();
+				document.getElementById("startButton").focus();
 			}
 			//Determine how many items are incorrect
 			else if (itemCount == 0)
@@ -656,14 +656,11 @@ function navigate(direction) {
 		//If over time
 		if (timeRemaining < 0.0)
 		{
-			document.getElementById("upButton").disabled = true;
-			document.getElementById("dnButton").disabled = true;
-			document.getElementById("rtButton").disabled = true;
-			document.getElementById("lfButton").disabled = true;
-			document.getElementById("actButton").disabled = true;
-			document.getElementById("leaveButton").disabled = true;
+			disableGameButtons();
 			document.getElementById("msgPar").textContent = "I'm sorry but you ran out of time and missed your friends. Better luck next time!";
+			document.getElementById("startButton").focus();
 		}
+		
 	}
 }
 
@@ -777,6 +774,19 @@ function clearBoxes(){
 	}		
 }
 
+//Name: disableGameButtons
+//Description: This disables the navigation and game buttons
+//Input: None
+//Output: None, buttons disabled
+function disableGameButtons(){
+	document.getElementById("upButton").disabled = true;
+	document.getElementById("dnButton").disabled = true;
+	document.getElementById("rtButton").disabled = true;
+	document.getElementById("lfButton").disabled = true;
+	document.getElementById("actButton").disabled = true;
+	document.getElementById("leaveButton").disabled = true;
+}
+
 //Run program
 //-------------------------------------------------------------------------------
 //Current location in table
@@ -799,6 +809,7 @@ document.addEventListener("keydown", function(event) {
 	var actBut = document.getElementById("actButton");
 	var guessBut = document.getElementById("submitButton");
 	var guessInput = document.getElementById("puzGuess");
+	var startBut = document.getElementById("startButton");
 	
 	//Determine key code and call function
 	if (event.keyCode == 38)
@@ -825,6 +836,8 @@ document.addEventListener("keydown", function(event) {
 		takeAction();
 	else if (event.keyCode == 13 && document.activeElement == guessInput)
 		checkGuess();
+	else if (event.keyCode == 13 && document.activeElement == startBut)
+		startGame();
 });
 
 //Other actions
