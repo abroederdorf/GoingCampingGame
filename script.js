@@ -136,9 +136,6 @@ function startGame() {
 	
 	//Test to see items
 	console.log("Winning items: " + winningItems);
-	/*console.log("Bedroom1: " + bedroom1.items);
-	console.log("Bedroom2: " + bedroom2.items);
-	console.log("Kitchen: " + kitchen.items);*/
 	
 	//Unselect current cell
 	unSelectCell();
@@ -302,10 +299,9 @@ function takeAction() {
 			
 			//Display instructions in message box for puzzle room 3
 			var printStr = "The combination for this cabinet is a random order of three odd integers between 1 and 7. Example: If the combination is 117 or 711, the sum is nine. When you guess the correct combination the cabinet will open. Good luck!";
-			var strCom = "If you sum all three digits, the total is " + combSum + ".";
 			document.getElementById("msgPar").textContent = printStr;
-			document.getElementById("msgParCom").textContent = strCom;
 			document.getElementById("msgParCom").style.display = "block";
+			document.getElementById("puz3Sum").textContent = combSum;
 		}
 		else
 			alert("Error in take action");
@@ -373,6 +369,9 @@ function openCabinet() {
 	//Get room
 	var room = getRoom();
 	
+	//Show cabinet
+	document.getElementById("itemDiv").style.display = "block";
+	
 	//Change names of items to those in room and set radio buttons to unchecked
 	var spanID, txtStr, radID;
 	for (var i = 1; i < 4; i++)
@@ -393,10 +392,7 @@ function openCabinet() {
 		document.getElementById("cabRad4").checked = false;
 	}
 	else
-		document.getElementById("cabLab4").style.display = "none";
-	
-	//Show cabinet
-	document.getElementById("itemDiv").style.display = "block";		
+		document.getElementById("cabLab4").style.display = "none";		
 }
 
 //Name: yesItem
