@@ -347,7 +347,7 @@ function checkGuess() {
 		if (playerGuess == room.combination)
 		{
 			//Update message that guess is correct
-			document.getElementById("puzFB").textContent = "Correct, good work! Look at the items in the cabinet listed below.";
+			document.getElementById("puzFB").textContent = "Correct, good work! Look at the items in the cabinet.";
 			
 			//Open cabinet
 			openCabinet();

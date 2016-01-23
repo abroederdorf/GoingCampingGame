@@ -8,7 +8,7 @@
 	<body>
 		<!--Title on page-->
 		<div id="titleDiv">
-			<h4 id="titleHead">Going Camping</h4>
+			<h1 id="titleHead">Going Camping</h1>
 		</div>
 		
 		<!--Top section-->
@@ -18,22 +18,22 @@
 				<!--Table for game board-->
 				<table id="house">
 					<tr>
-						<td id="c11" class="rooms">Bedroom 2</td>
-						<td id="c21" class="rooms">Bathroom</td>
-						<td id="c31" class="rooms">Bedroom 1</td>
+						<td id="c11" class="rooms"><img height=75 width=120 src="Rooms/bedroom2.jpg"></td>
+						<td id="c21" class="rooms"><img height=75 width=120 src="Rooms/bathroom.jpg"></td>
+						<td id="c31" class="rooms"><img height=75 width=120 src="Rooms/bedroom1.jpg"></td>
 					</tr>
 					<tr>
-						<td id="c12" class="rooms">Hall Closet</td>
-						<td id="c22" class="rooms">Dining Room</td>
-						<td id="c32" class="rooms">Kitchen</td>
+						<td id="c12" class="rooms"><img height=75 width=120 src="Rooms/hallCloset.jpg"></td>
+						<td id="c22" class="rooms"><img height=75 width=120 src="Rooms/dining.jpg"></td>
+						<td id="c32" class="rooms"><img height=75 width=120 src="Rooms/kitchen.jpg"></td>
 					</tr>
 					<tr>
-						<td id="c13" class="rooms">Living Room</td>
-						<td id="c23" class="rooms">Entry</td>
-						<td id="c33" class="rooms">Study</td>
+						<td id="c13" class="rooms"><img height=75 width=120 src="Rooms/living.jpg"></td>
+						<td id="c23" class="rooms"><img height=75 width=120 src="Rooms/entry.jpg"></td>
+						<td id="c33" class="rooms"><img height=75 width=120 src="Rooms/study.jpg"></td>
 					</tr>
 					<tr>
-						<td id="c14" class="rooms" colspan="3">Porch</td>
+						<td id="c14" class="rooms" colspan="3"><img height=75 width=360 src="Rooms/porch.jpg"></td>
 					</tr>
 				</table>
 				
@@ -72,6 +72,7 @@
 					<span id="statSpan2" class="packItems">2. Empty</span>
 					<span id="statSpan3" class="packItems">3. Empty</span>
 				</fieldset>
+				<br>
 				<fieldset>
 					<legend><strong>10 Essentials Checklist</strong></legend>
 					<ul class="checklist">
@@ -146,13 +147,15 @@
 				<button type="button" id="yesButton" class="navButtons">Yes</button>
 				<button type="button" id="closeButton" class="navButtons">No, Close Cabinet</button>
 				<div id="packDiv">
-					<p id="addPar">Select an item from the cabinet above, then select a position in your backpack to add it.</p>
+					<p id="addPar">Select an item from the cabinet, then select a position in your backpack to add it.</p>
 					<label class="packItems"><input type="radio" name="packPos" id="packRad1">1</label>
 					<label class="packItems"><input type="radio" name="packPos" id="packRad2">2</label>
 					<label class="packItems"><input type="radio" name="packPos" id="packRad3">3</label>
 					<button type="button" id="packButton" class="navButtons">Add Item</button>
 				</div>
 			</div>
+		</div>
+		<div id="bottomPadding">
 		</div>
 		
 		<!--Script files for game-->

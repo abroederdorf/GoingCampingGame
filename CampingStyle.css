@@ -1,11 +1,15 @@
 /*-------------------------Title-------------------------*/
 #titleDiv{
-	background-color: #43BFC7;
+	/*background-color: #43BFC7;*/
 }
 
 #titleHead{
 	text-align: center;
-	font-size: 1.5em;
+	color: #000000;
+	text-shadow: 2px 2px #AFDCEC;
+	font-family: sans-serif;
+	font-size: 250%;
+	font-weight: bold;
 }
 
 #topSection{
@@ -16,9 +20,9 @@
 /*-------------------------Game board-------------------------*/
 #gameBoard{
 	float: left;
-	width: 350px;
+	width: 400px;
 	vertical-align: top;
-	margin-left: 30px;
+	margin-left: 5px;
 }
 
 #house{
@@ -29,14 +33,14 @@
 
 .rooms{
 	border: solid black 1px;
-	padding: 10;
+	/*padding: 10;*/
 	text-align: center;
 }
 
 /*-------------------------Game board buttons-------------------------*/
 #butDiv{
 	margin-top:5px;
-	margin-left: 35px;
+	margin-left: 65px;
 }
 
 .navButtons{
@@ -84,11 +88,12 @@
 	float: left;
 	width: 100px;
 	vertical-align: top;
+	margin-left: 10px;
 }
 
 #startButton{
 	margin: auto; 
-	margin-top: 50px;
+	margin-top: 115px;
 }
 
 #instrButton{
@@ -105,11 +110,11 @@
 /*-------------------------Player Status-------------------------*/
 #statDiv{
 	float: left;
-	vertical-align: top;
-	border: dashed 2px;
-	width: 450px;
-	background-color: silver;
-	margin-left: 20px;
+	margin-top: 30px;
+	border: solid 2px gray;
+	width: 425px;
+	/*background-color: silver;*/
+	margin-left: 7px;
 	margin-bottom: 5px;
 }
 
@@ -135,14 +140,15 @@
 #instrDiv{
 	clear: left;
 	margin-top: 20px;
-	border: dashed 1px;
+	border-width: 10px;
+	border-style: ridge;
 	max-width: 1000px;
 	margin: auto;
-	background-color: #E77471;
+	/*background-color: #AFDCEC;*/
 }
 
 .instructions{
-	padding-left: 5px;
+	padding-left: 7px;
 	padding-right: 5px;
 }
 
@@ -156,11 +162,13 @@
 #hintDiv{
 	margin-top: 10px;
 	clear: left;
-	border: dashed 1px;
+	border-width: 10px;
+	border-style: double;
+	border-color: gray;
 	max-width: 1000px;
 	margin: auto;
 	margin-top: 20px;
-	background-color: #C8A2C8;
+	/*background-color: #AFDCEC;*/
 }
 
 /* -------------------------Message Aarea-------------------------*/
@@ -175,9 +183,9 @@
 #msgDiv{
 	float: left;
 	vertical-align: top;
-	border: dotted 1px;
-	background-color: #99C68E;
-	width: 400px;
+	border: double 3px gray;
+	/*background-color: #99C68E;*/
+	width: 375px;
 }
 
 #msgHead{
@@ -196,9 +204,10 @@
 #puzzleDiv{
 	float: left;
 	vertical-align: top;
-	background-color: #F9966B;
+	/*background-color: #F9966B;*/
 	border: solid gray 1px;
 	margin-left: 5px;
+	padding-left: 5px;
 	width: 250px; 
 }
 
@@ -227,7 +236,7 @@
 #itemDiv{
 	float: left;
 	vertical-align: top;
-	background-color: #FFE5B4;
+	/*background-color: #FFE5B4;*/
 	border: solid gray 1px;
 	margin-left: 5px;
 	width: 330px;
@@ -268,4 +277,10 @@
 #packButton{
 	margin-left: 20px;
 	margin-bottom: 5px;
+}
+
+/*-----------------Bottom Padding-------------------*/
+#bottomPadding{
+	clear: left;
+	padding-bottom: 50px;
 }
